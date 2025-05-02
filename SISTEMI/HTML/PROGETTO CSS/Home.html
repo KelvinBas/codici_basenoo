@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMI E RETI</title>
+    <link rel="stylesheet" href="CSS.css">
+       
+</head>
+<body>
+
+<div id="menu">
+    <div class="categoria" onclick="togglesottocategoria('sistemi')">I SISTEMI</div>
+    <div class="sottocategoria" id="sistemi">
+        <div class="sottocategoria" onclick="mostraDescrizione('blackbox')">Le Blackbox</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('classificazione')">La classificazione dei sistemi</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('modellazione')">Modellazione dei sistemi</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('modelli')">I modelli</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('automi')">Gli automi a stati finiti</div>
+    </div>
+
+    <div class="categoria" onclick="togglesottocategoria('cpu')">LA CPU</div>
+    <div class="sottocategoria" id="cpu">
+        <div class="sottocategoria" onclick="mostraDescrizione('cicli')">I cicli</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('componenti')">I componenti della CPU</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('registri')">I registri</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('alu')">L'ALU</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('cu')">La CU</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('motherboard')">La motherboard e la sua architettura</div>
+    </div>
+
+    <div class="categoria" onclick="togglesottocategoria('memoria')">LA MEMORIA</div>
+    <div class="sottocategoria" id="memoria">
+        <div class="sottocategoria" onclick="mostraDescrizione('tipologie')">Tipologie di memoria</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('gestione')">La gestione della memoria</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('bus_comunicazione')">I Bus e la comunicazione</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('bus_principali')">I bus principali</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('bus_espansione')">I bus di espansione</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('architetture_non_von_neumann')">Le architetture non di Von Neumann</div>
+        <div class="sottocategoria" onclick="mostraDescrizione('topologie_rete')">Topologie di rete</div>
+    </div>
+</div>
+
+<div id="contenuto">
+    <div class="descrizione" id="blackbox">
+        <img src="blackBox.png" alt="Blackbox Image"> 
+        <div class="testo">
+            <h2>Le Blackbox</h2>
+            <p>Le blackbox sono dispositivi o modelli utilizzati in vari campi, inclusi ingegneria, scienze computazionali e teoria dei sistemi, per descrivere e analizzare sistemi complessi di cui si conoscono solo gli ingressi e le uscite, senza necessità di comprenderne i dettagli interni.</p>
+        </div>
+    </div>
+    <div class="descrizione" id="classificazione">
+        <img src="sistema.webp" alt="Classificazione Image">
+        <div class="testo">
+            <h2>La classificazione dei sistemi</h2>
+            <p>Un sistema può essere:
+                <ul>
+                    <li><b>dinamico</b> o <b>statico</b></li>
+                    <li><b>combinatorio</b> o <b>sequenziale</b></li>
+                    <li><b>variante</b> o <b>invariante</b></li>
+                    <li><b>discreto</b> o <b>continuo</b></li>
+                    <li><b>proprio</b> o <b>improprio</b> </li>
+                    <li><b>deterministico</b> o <b>stocastico</b></li>
+                </ul>
+            </p>
+         </div>
+    </div>
+            <div class="descrizione" id="modellazione">
+               
+                <div class="testo">
+                    <h2>La modellazione dei sistemi</h2>
+                    <p>La fase di modellazione è la fase in cui si crea un modello del sistema originale che ne copia fedelmente il comportamento. Possono essere di due tipi:
+                        <ul>
+                            <li> modelli <b>fisici</b>(o reali); </li>
+                            <li> modelli <b>astratti</b>(o simbolici).</li>
+                        </ul>
+                        A loro volta i modelli fisici si possono dividere in due categorie:
+                        <ul>
+                            <li> modelli <b>iconici</b>,dove vengono creati modelli in scala;</li>
+                            <li>modelli <b>analogici</b>,dove vengono mantenute solo le relazioni tra gli elementi e non le grandezze fisiche.</li>
+                        </ul>
+                        I modelli astratti sono divisi in tre categorie:
+                        <ul>
+                            <li>modelli <b>matematici</b>,che sono espressioni matematiche;</li>
+                            <li>modelli<b>logici</b>,che rappresentano il comportamento del sistema senza fornire indicazioni sul suo aspetto fisico.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div> 
+            <div class="descrizione" id="modelli">
+                <img src="modello.jpg" alt="Modelli Image"> 
+                <div class="testo">
+                    <h2>I modelli</h2>
+                    <p> I sistemi reali sono generalmente complessi da studiare e sono spesso formati da elementi molto numerosi vhe possono avere tra di loro delle relazioni non facilmente intuitive.Per studiare un sistema è necessario un <b>MODELLO</b> che ne simuli il comportamento.<br>
+                    Attraverso i modelli possono essere effettuate simlazioni del sistema originale mediante:
+                    <ul>
+                        <li><b>simulazione predettiva</b>(conoscendo la storia del sistema si stimano i valori delle uscite);</li>
+                        <li><b>simulazione descittiva</b>(valtazione del sistema con delle sollecitazioni prestabilite);</li>
+                        <li><b>simulazione strutturale</b>(durante la progettazione del sistema si cerca la struttura ottimale operando su un modello parametrizzato).</li>
+                    </ul>
+                    Per esempio i <b>circiti elettrici</b> e i <b>circuiti idraulici</b> sono fortemente analoghi: possono qindi essere studiati utilizzando i medesimi modelli.
+                    </p>
+                </div>
+            </div>
+            <div class="descrizione" id="automi">
+                <img src="automi.png" alt="Automo Image"> 
+                <div class="testo">
+                    <h2>Gli automi a stati finiti</h2>
+                    <p>Un <b>AUTOMA</b> è un sottoinsieme <b>dinamico di un sistema</b>. Un <b>automa a stati finiti</b>(<b>FSA</b>,Finite State Automaton) è un sistema <b>invariante</b>,<b>discreto</b> negli avanzamenti e nelle interazioni, in cui gli insieme <b>VI</b> e <b>VU</b>,cosi' come gli <b>stati</b>, sono composti da numero <b>finito</b> di elementi.<br><br><br>
+                    In sintesi un automa a stati è formato da:
+                    <ul>
+                        <li><b>T</b>= {insieme discreto dei <b>tempi</b>};</li>
+                        <li><b>I</b>={insieme finito delle variabili d'ingresso};</li>
+                        <li><b>VI</b>={insieme finito delle <b>variazioni</b> degli <b>ingressi</b>};</li>
+                        <li><b>U</b>={insieme finito delle variabili d'<b>uscita</b>};</li>
+                        <li><b>VU</b>={insieme finito delle <b>variazioni</b> delle <b>uscite</b>};</li>
+                        <li><b>S</b>={insieme finito degli <b>stati</b>};</li>
+
+                    </ul>
+                    Gli FSA si suddividono in due categorie:
+                    <ul>
+                        <li>automi a stati finiti <b>deterministici</b>, chiamati DFA (Deterministic Finite Automaton);</li>
+                        <li>automi a stati finiti <b>non deterministici</b>, chiamati NFA (Non deterministic Finite Automaton).</li>
+                    </ul>
+                 </p>
+                </div>
+            </div>
+            <div class="descrizione" id="cicli">
+        <img src="ciclo.png" alt="Cicli Image"> 
+        <div class="testo">
+            <h2>I cicli</h2>
+            <p>Il funzionamento di una CPU inizia con il <b>prelevamento</b> della memoria del codice macchina dell'istruzione da eseguire; tale operazione viene eseguita dalla Control Unit.L'istruzione prelevata viene trasferita in un registro specifico e quindi <b>codificata</b>. Dopo aver codificato, cioè tradotto, l'istruzione, la CPU emette i segnali necessari all'<b>esecuzione</b> dell'istruzione. Il procedimento appena descritto, attraverso il quale la CPU esegue un'istruzione, prende il nome di <b>ciclo macchina</b>,che può essere idealmente suddiviso in quantro fasi:
+            <ol>
+                <li>fase di <b>Fetch dell'istruzione</b>;</li>
+                <li>fase di <b>Decode dell'istruzione</b>;</li>
+                <li>fase di <b>Fetch degli operandi</b>;</li>
+                <li>fase di <b>Execute dell'istruzione</b>;</li>
+
+            </ol>
+            </p>
+        </div>
+    </div>
+    <div class="descrizione" id="componenti">
+        <img src="cpu.webp" alt="Componenti Image"> 
+        <div class="testo">
+            <h2>I componenti della CPU</h2>
+            <p>L'<b>unità centrale di elaborazione (CPU)</b> contiene gli elementi circuitali necessari al funzionamento dell'elaboratore.La CPU esegue i programmi residenti in memoria prelevando, decodificando ed eseguendo le istruzioni in essi contenute e coordinando il trasferimento dei dati tra le varie unità funzionali.<br>
+            Nella CPU sono presenti:
+            <ul>
+                <li>i <b>registri</b>, che costituiscono la memoria interna alla CPU, sono analoghi a celle di memoria, ma accesibili più velocemente;contengono dati o istruzioni di uso frequente, o risulatati intermedi.I registri fondamentali sono tre:
+                <ol>
+                    <li><b>Instruction Register(IR):</b> contiene l'istruzione corrente;</li>
+                    <li><b>Program Counter(PC):</b> contiene l'indirizzo di mememoria della prossima istruzione da eseguire;</li>
+                    <li><b>Program Status Word(PSW):</b> contiene dei bit speciali che informano sul risultato dell'ultima operazione.</li>
+                </ol>
+            </li><b>L'UC(Unitàà di Controllo)</b>,che si occupa di coordinare il flusso dei dati attravverso le varie componenti della macchina e i suoi componenti principali sono:
+            <ol>
+                <li>recuperare l'istruzione succesiva da eseguire; </li>
+                <li>decodificarla</li>
+                <li>organizzare la sue esecuzione.</li>
+            </ol>
+                <li>L'<b>ALU(Unità Aritmetico-Logica)</b> si occupa di eseguire le principali operazioni logiche(AND,OR,NOT),aritmetiche(somme,prodotti) e confronti.In genere memorizza il risultato in un registro predefinito che può contenere anche gli operandi, detto <b>accumulatore</b></li>
+            </ul></p>
+        </div>
+    </div>
+    <div class="descrizione" id="registri">
+        <img src="registri.jpg" alt="Registri Image"> 
+        <div class="testo">
+            <h2>I registri</h2>
+            <p>Abbiamo parlato in generale dei registri nella sezione "I componenti della CPU" adesso andiamo a vederli più approfonditamente.
+                I registri della CPU sono piccole unità di memoria molto veloci situate all'interno del processore. Essi sono utilizzati per memorizzare dati temporanei durante l'esecuzione delle istruzioni del programma. Di seguito, ti fornirò una panoramica approfondita dei registri più comuni e delle loro funzioni:
+            <ul>
+                <li><b>GPR(General-purpose Register)</b>=utilizrzati per memorizzae dati temporanei che possono essere utilizzati per eseguire operazioni aritmetiche, logiche e di trasferimento. La quantità e la funzione di ciascun registro dipendono dall'architettura.</li>
+                <li><b>Status Register</b>=Il registro di stato è un registro speciale che contiene "flag" che rappresentano informazioni sullo stato dell'ultima operazione eseguita dalla CPU. Questi flag sono utilizzati per condizionare il flusso di controllo del programma (come salti condizionati). Alcuni flag comuni includono:
+                <ul>
+                    <li><b>CF(Carry Flag):</b>Indica un "riporto" o un "prestito" nell'operazione aritmetica.</li>
+                    <li><b>ZF(Zero Flag):</b>Indica che il risultato dell'operazione è zero.</li>
+                    <li><b>SF(Sign Flag):</b>Indica se il risultato dell'operazione è negativo (per numeri in complemento a due).</li>
+                    <li><b>OF(Overflow Flag):</b>Indica se si è verificato un overflow aritmetico.</li>
+                    <li><b>IF(Interrupt Flag):</b>Permette o disabilita le interruzioni nel processore.</li>
+                    <li><b>DF(Direction Flag):</b>Indica la direzione in cui i dati devono essere letti o scritti in memoria, solitamente per operazioni di stringhe.</li>
+                </ul></li>
+                <li><b>SP(Stack Pointer)</b>=Indica l'indirizzo della cima dello stack, utilizzato per gestire le chiamate di funzione e le interruzioni.</li>
+                <li><b>AC(Accumulatore)</b>=Conserva i risultati temporanei delle operazioni aritmetiche o logiche.</li>
+            </ul> </p>
+        </div>
+    </div>
+    <div class="descrizione" id="alu">
+        <img src="alu.png" alt="Alu Image"> 
+        <div class="testo">
+            <h2>L'Alu</h2>
+            <p>E' il blocco che esegue le trasformazioni sui dati.Poichè i dati,indipendentemente dal loro significato,sono codificsti attraverso numeri binari,qualsiasi trasformazione da fare sui dati si riduce a un operazione aritmetica logica.Interviene su due operandii che possono essere contenuti nei registri interni o provenire dalla memoria attraverso l'MDR e produce un risultato che può essere salvato su un registro interno o in memoria attraverso l'MDR. </p>
+        </div>
+    </div>
+    <div class="descrizione" id="cu">
+        <img src="cu.jpg" alt="CU Image"> 
+        <div class="testo">
+            <h2>La Cu </h2>
+            <p>Cu(Control Unit) è il blocco che invia i comandi esecutivi all'ALU in base alla decodifica dell'istruzione e decide l'incremento dell'indirizzo di memoria contenuto nel registro PC, in modo da predisporsi all'esecuzione dell'istruzione.</p>
+        </div>
+    </div>
+    <div class="descrizione" id="motherboard">
+        <img src="motherboard.png" alt="Motherboard Image"> 
+        <div class="testo">
+            <h2>La motherboard e la sua architettura</h2>
+            <p>La <b>scheda madre</b>(<b>motherboard</b>) è la scheda a circuito stampato che ospita diversi componenti elettronici, che poossiamo così riassumere:
+            <ul>
+                <li>l'unita centrale di elaborazione (<b>CPU</b>) e il relativo sistema di dissipazione del calore;</li>
+                <li>la memoria <b>RAM</b> montata sugli appositi <b>SLOY</b>;</li>
+                <li>i <b>connetori</b>, o slot per schede di espansione;</li>
+                <li>il circuito integrato dell'<b>UEFI</b> e del <b>BIOS</b>;</li>
+                <li>il <b>chipset</b>;</li>
+                <li>i componenti ausiliari (batteria,circuiti di raffreddamento,jumper,dissipatori..);</li>
+                <li>le porte di collegamento esterne (per esempio USB,HDMI,audio/video..);</li>
+            </ul>
+        E' molto importante tenere in conto il concetto di <b>compatibilità</b> esistente tra la <b>scheda madre</b>,la <b>CPU</b> e tutti gli altri componenti della motherboard stessa, compresi il chipste e i BUS, oltre alle memorie, ai connetori e alle porte di espansione.<br><br><br>
+    Inoltre la <b>scheda madre</b> può essere di diversi <b>formati</b>, chiamati <b>form factor</b>; i tre principali sono:
+            <ul>
+               <li><B>ATX</B>(<b>Advanced Technology eXtended</b>), di dimensione 30.5 X 24,4 cm, ospita numeri <b>slot</b> per i banchi di <b>memoria RAM</b> e per le schede di espansione. La sua sua struttura di facilitare il raffreddamento della componentistica, è il formato leggermente piu diffuso;</li>
+               <li><b>E-ATX</b>,<b> Extended ATX</b> di dimensione 30.5 X 33.0 cm, permette l'allogiamento di sistemi di raffreddamento di grandi dimensioni, utili per garantire il funzionamento al sistema anche in caso di <b>OVERCLOCKING</b>;</li>
+               <li><b>microATX</b> è il formato per i computer compatti; tali schede sono dotate di un numero limitato di slot; in genere solo 2 slot per la memoria Ram e pochissimi connetori. La dimensione è di 24.3 X 20.5 cm, anche se quello massimo è stato stabilito in 24.4 X 24.4.</li>
+            </ul></p>
+        </div>
+    </div>
+    <div class="descrizione" id="tipologie">
+        <img src="ram.jpg" alt="Tipologie Image"> 
+        <div class="testo">
+            <h2>Tipologie di memoria</h2>
+            <p>Un computer tipicamente contiene differenti tipi di memoria, essenzialmente appartenenti a tre diverse categorie <b>RAM</b>,<B>ROM</B> e <b>cache</b> (queste ultime verrano trattate ampiamente in seguito).<br>
+            <h3>RAM</h3><br>
+             Il termine <b>RAM</b>(<b>Random Access Fruit</b>) indica che in tali memorie è possibile accedere in qualunque locazione di memoria e per qualnque tipo di accesso (lettura o scrittura).La caratteristica principale delle RAM è il fatto che l'informazione in esse contenuta rimane solo finchè sono alimentate(<b>volatilità</b>).Le RAM si sidduvidono in due sottocategorie chiamate <b>RAM dinamiche (DRAM)</b> e <b>RAM statiche (SRAM)</b><br>
+            <h3>ROM</h3><br>
+             Con il termine <b>ROM (Read Only Memory)</b> indichiamo una categoria di memorie accessibili solo in <b>lettura</b>. In realtà attualmente esistono particolari ROM che possono essere riscritte. In ogni caso tutte le ROM sono caraterizzate dal fatto che le informazioni in esse contenute permanogno anche quando manca la corrente. Le mememorie ROM vengono in genere utilizzate per memorizzare programmi e dati di configurazione essenziali per il funzionamento del computer che devono essere conservati anche quando il computer è spento.</p>
+        </div>
+    </div>
+    <div class="descrizione" id="gestione">
+        <img src="memoria.jpg" alt="Gestione Image"> 
+        <div class="testo">
+            <h2>La gestione della memoria</h2>
+            <p>Nell'archittetura von Neumann il canale di comunicazionetra la CP e la memoria è il pnto critico del sistema ed è chiamato <b>collo di bottiglia</b>.La tecnlogia consente di realizzare processori sempre più veloci e memorie sempre più capienti, tuttavia la velocità di accesso alle memorie non è adeguata alla crescita repentina delle CPU. La soluzione ottimale per un sistema di gestione della memoria dovrebbe garantire costi minimi con capacità massime e bassi tempi di accesso al dato. La soluzione che è stata escogitata prevede l'uso di memorie con tempi di acesso diversi, organizzate secondo gerarchie: con l'uso di tecnlogie differnti possiamo soddisfare al meglio ciascuno dei requisiti.
+            </p>
+        </div>
+    </div>
+    <div class="descrizione" id="bus_comunicazione">
+        <img src="bus.webp" alt="Bus Image"> 
+        <div class="testo">
+            <h2>I Bus e la comunicazione</h2>
+            <p>Il BUS può essere identificato da un insieme di linee che conducono elettricitò, ciascuna delle quali collegata a un <b>Pin</b> di un dispositivo.Per collegare due dispositivi che usano 32 piedini per comunicare, il BUS sarà formato da 32 linee costituite da altrettanti fili conduttori. In tal modo la linea 1 collegherà i piedini numero 1 dei dispositivi, la linea 2 collegherà i piedini numero 2 dei dispositivi ecc.Questo anche in ragione del fatto che ciascuna linea dei BUS pò trasmettere solo un segnale.
+                <br>
+                I BUS si possono dividere in due categorie:
+                <ul>
+                    <li>BUS <b>interno</b> alla CPU, trasporta dati verso e dall'ALU;</li>
+                    <li>BUS <b>esterno</b> alla CPU, trasporta dati da e verso la memoria e i dispositivi di I/O.</li>
+                </ul>
+                <br>
+                Si definisce <b>protocollo</b> del BUS l'insieme di regole precise che consentono ai vari dispositivi, rappresentatinanche da schede particolari, di comunicare attraverso il BUS di sistema.
+                Il dispositivo che intende inviare un segnale sulla linea del BUS non fa altro che attivare un voltaggio particolare che identifica il dato inviato, secondo le specifiche definite dal protocollo. Il segnale viaggia sulla linea e può essere ricevuto da tutti gli altri dispositivi collegati al BUS: possiamo dire che il protocollo del BUS regola la trasmissione e la ricezione dei dati.
+                <br>
+                In generale possiamo affermare  che il dispotivo in grado di iniziare un trasferimento dei dati è denominato <b>master</b>, mentre un dispositivo che inizia la comunicazione solo su comando del master assume il nome di <b>slave</b>.
+            </p>
+        </div>
+    </div>
+    <div class="descrizione" id="bus_principali">
+        <img src="busprinc.jpg" alt="BUSprinc Image"> 
+        <div class="testo">
+            <h2>I bus principali</h2>
+            <p>Venti o trent'anni fa i processori erano così lenti nell'elaborare le informazioni che i BUS, durante le operazioni di lettura e scrittra, erano sincronizzati al processore stesso ed era disponsibile un solo BUS di collegamento, chiamato <b>BUS di sistema.</b>Attualmente i processori sono così veloci che in molte architteture moderne esistono due o più BUS, ciascuno specializzato in particolari tipi di traffico.I due BUS principali sono:
+                <ul>
+                    <li><b>system BUS</b> o <b>local BUS</b>;</li>
+                    <li><b>PCI BUS</b> o <b>BUS di espansione</b>.</li>
+                </ul>
+                Il primo collega la CPU alla memoria di sistema ed è molto veloce, il secondo, assai più lento, mette invece in comunicazione periferiche quali per esempio il disco fisso oppure la scheda audio o la scheda video. Questi BUS più lenti si connettono al system BUS attraverso il <b>chipset</b> (<b>North</b> e <b>SouthBridge</b>) che svolge il compito di dirigere il traffico tra questi due BUS diversi tra loro per velocità e tipologia.
+                <br>Esistono diversi tipi di BUS di espansione, come per esempio <b>PCI,SB,AGP,PCI Express, FireWire</b> e altri ancora.
+            </p>
+        </div>
+    </div>
+    <div class="descrizione" id="bus_espansione">
+        <img src="controller.jpg" alt="Busespan Image"> 
+        <div class="testo">
+            <h2>I bus di espansione</h2>
+            <p>Nel sistema vi sono altri BUS connessi tramite opportuni <b>CONTROLLER</b>, che sono:
+                <ul>
+                    <li>BUS <b>IDE</b> (<b>ATA</b>) per connetere fino a due dischi IDE (fino a 133 MB/s), ormai in disso da decenni;</li>
+                    <li>BUS <b>SATA</b> (fino a 6 Gb/s per SATA 3);</li>
+                    <li><b>Gigabit Ethernet</b> (fino a 10 Gb/s per 10 Gigabit Ethernet);</li>
+                    <li><b>FireWire</b> o IEE 1394B (ormai in disuso);</li>
+                    <li><b>USB</b> (fino a 5 GB/s per USB 4.0);</li>
+                    <li><b>PCI Express</b> (fino a 32 GB/s per linea per PCIe 5.0).</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <div class="descrizione" id="topologie_rete">
+        <img src="topologie.png" alt="topologie Image"> 
+        <div class="testo">
+            <h2>Topologie di rete</h2>
+            <p>La topologia di rete dell'USB segue la forma di una piramide, in cima alla quale è posizionato il <b>controller host</b>, e ammette connesioni con gli <b>hub</b> che permettono di stratificare i collegamenti a stella. Al livello degli <b>hub</b> viene rilevata la conessione di nuove periferiche e viene controllata l'alimentazione della periferica stessa. La connessione <b>a caldo</b> delle periferiche, senza necessità di spegnere il sistema, è una delle caratteristiche peculiari dell'architettura USB: una volta conessa la periferica, viene effettuata la procedura di riconoscimento chiamata <b>BUS USB enumeration</b> schematizzata nel diagramma a lato. Lo standard USB garantisce la funzionalità tra i vari dispositivi collegabili, definendo delle <b>classi</b> di dispotivi che standardizzano anche il tipo di funzionamento. Per esempio gli <b>hub</b> costituiscono una classe di dispositivi, gli <b>HID</b> (<b>Human Interface Device</b>), che consentonol'inserimento manuale di dati <b>naturali</b> associato a ogni periferica utilizzando una tecninca basata sulle priorità.
+            </p>
+        </div>
+    </div>
+    <div class="descrizione" id="architetture_non_von_neumann">
+        <img src="non_veunnaman.png" alt="Architettura Image"> 
+        <div class="testo">
+            <h2>Le architetture non di Von Neumann</h2>
+            <p>Per migliorare  le caratteristiche delle CPU e dei sistemi di elaborazione in generale esistono diverse tecniche.In primo luogo vi è l'aumento progressivo della frequenza di clock che a parità di comportamento rende più veloci le elaborazioni. Altre direzioni di evoluzione sono state l'aumento dell'<b>ampiezza di parola </b>e l'aumento dello<b> spazio di indirizzamento </b>, incrementando rispettivamente il numero di bit elaborati contemporaneamente e il numero di celle indirizzabili.
+                Entrambe le tecniche tuttavia, nell'evoluzione delle architteture, hanno raggiunto presto un punto nel quale non era più possibile ottenere presestazioni migliori. E' nata allora un'altra direzione di sviluppo, chiamata in generale con l'espressione di "archittetre <b>non von Neumann"</b>", nella quale sono state introdotte funzioni di elaborazione parallele che consentono di aumentare la velocità di elaborazione a parità di frequenza di clock.<br>
+                <BR><b>GRADO DI PARALLELISMO DELLE ARCHITTETURE</b> 
+                    Le architteture possono essere classificate, come indicato nella <b>tassomia di Flynn</b>, in base al grado di parallelismo chhe rendono possibile:
+                    <ul>
+                        <li><b>SISD(Single Instruction Single Data)</b>, un  unico processore esegue un unica istruzione per volta e può prelevare e depositare in memoria un solo dato per volta.</li>
+                        <li><b>SIMD(Single Instruction Multiple Data)</b>, permettedi eseguire contemporaneamentela stessa operazionesu piu dati (utile per le operazioni multimediali)</li>
+                        <li><b>MISD(Multiple Instruction Single Data)</b>, consente di iniziare l'esecuzione di diverse istruzioni, ognuna si propi dati.Mentre si esegue un'istruzione si può cominciare a elaborare la succesiva.</li>
+                        <li><b>MIMD(Multiple Instruction Multiple Data)</b>, è relativa ai sistemi multiprocessori.</li>
+                    </ul>
+            </p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<script>
+    function togglesottocategoria(categoria) {
+        var sottocategoria = document.getElementById(categoria);
+        sottocategoria.style.display = sottocategoria.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function mostraDescrizione(id) {
+        
+        var descriziones = document.querySelectorAll('.descrizione');
+        descriziones.forEach(function(descrizione) {
+            descrizione.style.display = 'none';
+        });
+
+        
+        var descrizione = document.getElementById(id);
+        descrizione.style.display = 'flex';
+    }
+</script>
+
+</body>
+</html>

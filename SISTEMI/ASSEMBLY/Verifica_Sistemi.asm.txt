@@ -1,0 +1,152 @@
+ES 1
+; You may customize this and other start-up templates; 
+; The location of this template is c:\emu8086\inc\0_com_template.txt
+
+org 100h
+
+; add your code here
+.data
+a db 3
+b db 11
+c db ?
+.code
+mov cx,11
+mov dl,c
+ciao:
+inc a 
+loop ciao
+mov al,a 
+mov cx,3
+ciocs:
+dec b
+loop ciocs 
+mov bl,b
+cmp al,bl
+ja fine 
+mov dl,b
+mov c,dl
+
+fine:
+mov dl,a
+mov c,dl
+
+
+
+
+
+ret
+
+
+
+ES 2
+
+
+
+
+; You may customize this and other start-up templates; 
+; The location of this template is c:\emu8086\inc\0_com_template.txt
+
+org 100h
+
+; add your code here
+.data
+Ris db ?
+x db 3
+y db 2
+b db 5
+a db 80
+e db 2
+c db 9
+d db 4
+.code
+
+mov cx,2
+mov al,x
+mov bl,y
+ciao:
+mul x
+loop ciao
+mov dl,al
+mov cx,3
+verde:
+add bl,2
+loop verde
+mov al,b
+mul y
+add dl,bl
+sub dl,al
+mov bl,dl
+mov bl,2
+mov al,80
+div bl
+mov bl,al 
+mov al,c
+sub al,y
+mov dl,d
+mul dl
+add cl,3
+sub bl,dl
+mov bh,dl  
+
+
+
+
+ret
+
+
+
+
+Es 4
+
+
+; You may customize this and other start-up templates; 
+; The location of this template is c:\emu8086\inc\0_com_template.txt
+
+org 100h
+
+; add your code here 
+.data
+a db ?
+b db ?
+c db ?
+.code
+mov ah,01h
+int 21h
+mov a,al
+mov bl,al
+int 21h
+mov b,al
+mov cl,al
+int 21h
+mov c,al
+mov dl,al
+
+
+cmp bl,cl
+ja ciao
+cmp cl,dl
+ja cick
+
+
+ciao:
+cmp bl,dl
+ja mimmo
+mov dl,c
+mov ah,2
+int 21h
+
+
+
+mimmo:
+mov dl,a
+mov ah,2
+int 21h
+
+
+cick:
+mov dl,a
+mov ah,2
+int 21h
+
+
+ret      
